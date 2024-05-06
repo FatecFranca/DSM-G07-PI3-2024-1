@@ -26,6 +26,7 @@ const esquema = mongoose.Schema({
     },
     imagens: [
         {
+            num: { type: Number, required: true },
             endereco: { type: String, required: true },
         },
     ],

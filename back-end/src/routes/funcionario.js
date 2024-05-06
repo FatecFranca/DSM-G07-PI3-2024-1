@@ -4,7 +4,7 @@ import autenticacao from "../middlewares/autenticacao.js";
 
 const router = Router();
 
-router.post("/", autenticacao, controller.create);
+router.post("/", controller.create);
 router.get("/", controller.retrieveAll);
 router.get("/:id", controller.retrieveOne);
 router.post("/login", controller.login);

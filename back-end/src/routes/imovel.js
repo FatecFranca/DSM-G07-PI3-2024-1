@@ -6,6 +6,7 @@ const router = Router();
 
 router.post("/", autenticacao, controller.create);
 router.get("/", controller.retrieveAll);
+router.get("/search", controller.retrieveSearch);
 router.get("/:id", controller.retrieveOne);
 router.put("/:id", autenticacao, controller.update);
 router.delete("/:id", autenticacao, controller.delete);

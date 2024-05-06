@@ -46,6 +46,29 @@ controller.retrieveOne = async function (req, res) {
     }
 };
 
+controller.retrieveSearch = async function (req, res) {
+    try {
+        const reqKeys = Object.keys(req.query);
+
+        for (const key of reqKeys) {
+            if (req.query[key].includes("--")){
+                const [num1, num2] = req.query[key].split('--');
+                req.query[key] = { $gte: num1, $lte: num2 };
+            }
+        }
+
+        const query = Imovel.find(req.query).sort({ descricao: "asc" });
+
+        const result = await query.exec();
+
+        res.send(result);
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).end();
+    }
+};
+
 controller.update = async function (req, res) {
     try {
         const result = await Imovel.findByIdAndUpdate(req.params.id, req.body);
