@@ -1,4 +1,5 @@
 import Funcionario from "../models/Funcionario.js";
+import jsonwebtoken from "jsonwebtoken";
 
 const controller = {};
 
@@ -43,6 +44,32 @@ controller.retrieveOne = async function (req, res) {
         console.error(error);
 
         res.status(500).end();
+    }
+};
+
+controller.login = async function (req, res) {
+    const { login, senha } = req.body;
+
+    try {
+        const query = Funcionario.findOne({ login, senha });
+
+        let funcionario = (await query.exec())?.toObject();
+
+        if (funcionario) {
+            const token = jsonwebtoken.sign({}, process.env.SECRET, {
+                subject: funcionario._id.toString(),
+                expiresIn: "3d",
+            });
+
+            delete funcionario.senha;
+
+            return res.status(200).json({ funcionario, token });
+        }
+
+        return res.status(401).json({ message: "Login ou senha incorretos" });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
     }
 };
 
