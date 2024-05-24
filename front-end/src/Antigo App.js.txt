@@ -1,0 +1,160 @@
+import "./styles.css";
+
+function App() {
+  return (
+    <div>      
+        <header>
+          <nav>
+            <ul>
+              {/* <img src="/img/path3605.png" alt="logo" height="100px" width="78px" position="center">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="busca.html">Busca de Imóveis</a></li>
+                <li><a href="empresa.html">A Empresa</a></li>
+                <li><a href="documentacao.html">Documentação</a></li>
+                <li><a href="faleconosco.html">Fale Conosco</a></li>
+                <li><a href="login.html">Área do Cliente</a></li> */}
+            </ul>
+          </nav>
+        </header>
+
+        <div id="carousel-container">
+          <h1>Nossos Imóveis</h1>
+          <div id="carousel">
+            <div class="property">
+              {/* <img src="/img/pexels-binyamin-mellish-106399.jpg" alt="Imóvel 1"> */}
+                <h3>Loft Urbano com Design Industrial</h3>
+                <p>Este loft de estilo industrial possui teto alto, grandes janelas e um espaço aberto perfeito para
+                  quem aprecia um design contemporâneo.</p>
+                <p><strong>Preço:</strong> R$ 900.000,00</p>
+                <p><strong>Endereço:</strong> Rua Don Vito Corleone, nº 100, Bairro Poderoso Chefão, Franca/SP</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-max-rahubovskiy-7031607.jpg" alt="Imóvel 2"> */}
+                <h3>Residência Espaçosa com Piscina</h3>
+                <p>Uma casa espaçosa com 4 quartos, uma piscina refrescante e um elegante conceito aberto para momentos
+                  memoráveis em família..</p>
+                <p><strong>Preço:</strong> R$ 1.500.000,00</p>
+                <p><strong>Endereço:</strong> Rua dos Pokémons, nº 10, Bairro Pallet, Belo Horizonte/MG</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-photo-1029599.jpeg" alt="Imóvel 3"> */}
+                <h3>Chalé Rústico em Local Tranquilo</h3>
+                <p> Este chalé rústico oferece 2 quartos aconchegantes e está situado em um ambiente tranquilo cercado
+                  pela natureza.</p>
+                <p><strong>Preço:</strong> R$ 500.000,00</p>
+                <p><strong>Endereço:</strong> Rua dos Alfeneiros, nº 4, Bairro Hogwarts, São Paulo/SP</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-photo-1396132.jpeg" alt="Imóvel 4"> */}
+                <h3>Casa Sustentável com Energia Solar</h3>
+                <p>Uma casa ecológica com 3 quartos, painéis solares, jardim de chuva e recursos eficientes em termos de
+                  energia.</p>
+                <p><strong>Preço:</strong> R$ 1.200.000,00</p>
+                <p><strong>Endereço:</strong> Rua Tolkien, nº 9731, Bairro Terra Média, Brasília/DF</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-photo-2587054.jpeg" alt="Imóvel 5"> */}
+                <h3>Mansão de Luxo à Beira-Mar</h3>
+                <p>Uma mansão espetacular à beira-mar com 5 quartos, piscina infinita e acesso privativo à praia.</p>
+                <p><strong>Preço:</strong> R$ 2.500.000,00</p>
+                <p><strong>Endereço:</strong> Rua Pelé, nº 10, Bairro Vila Belmiro, Santos/SP</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-photo-3316924.webp" alt="Imóvel 6"> */}
+                <h3>Sala Comercial no Centro Empresarial</h3>
+                <p>Esta sala moderna e bem-iluminada está localizada em um prestigiado centro empresarial no coração da
+                  cidade, oferecendo acesso conveniente a importantes centros financeiros.</p>
+                <p><strong>Preço:</strong> R$ 400.000,00</p>
+                <p><strong>Endereço:</strong> Rua Aragorn, nº 87, Bairro Gondor, Fortaleza/CE</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-photo-3990589.jpeg" alt="Imóvel 7"> */}
+                <h3>Casa Aconchegante de 2 Quartos</h3>
+                <p>Esta casa encantadora oferece 2 quartos amplos, uma cozinha moderna e um jardim privativo perfeito
+                  para relaxar.</p>
+                <p><strong>Preço:</strong> R$ 600.000,00</p>
+                <p><strong>Endereço:</strong> Rua Ned Stark, nº 2, Bairro Winterfell, Porto Alegre/RS</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-photo-4258275.jpeg" alt="Imóvel 8"> */}
+                <h3>Casa Charmosa com Jardim Exuberante</h3>
+                <p>Uma casa charmosa com 3 quartos, lindos detalhes arquitetônicos e um jardim exuberante nos fundos
+                  para os amantes da natureza.</p>
+                <p><strong>Preço:</strong> R$ 800.000,00</p>
+                <p><strong>Endereço:</strong> Rua William Wallace, nº 7, Bairro Coração Valente, Rio de Janeiro/RJ</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/lafayette-park-washington-dc-c-architecture-161768.jpeg" alt="Imóvel 9"> */}
+                <h3>Apartamento Moderno no Centro da Cidade</h3>
+                <p>Este apartamento contemporâneo de 1 quarto está localizado no coração da cidade, proporcionando
+                  acesso conveniente a todas as comodidades urbanas.</p>
+                <p><strong>Preço:</strong> R$ 500.000,00</p>
+                <p><strong>Endereço:</strong> Rua Máximus Décimus Meridius, nº 1, Bairro Coliseu, Manaus/AM</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-leah-kelley-2090651.jpg" alt="Imóvel 10"> */}
+                <h3>Apartamento Luxuoso no Bairro Nobre</h3>
+                <p>Este luxuoso apartamento de 2 quartos está situado em um bairro nobre da cidade, oferecendo um estilo
+                  de vida sofisticado. Aprecie o conforto e a elegância neste espaço moderno.</p>
+                <p><strong>Preço:</strong> R$ 700.000,00</p>
+                <p><strong>Endereço:</strong> Rua Darth Vader, nº 666, Bairro Estrela da Morte, Franca/SP</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-luis-quintero-2111768.jpg" alt="Imóvel 11"> */}
+                <h3>Apartamento Charmoso no Centro Histórico</h3>
+                <p>Este charmoso apartamento de 1 quarto está situado no centro histórico da cidade, oferecendo uma
+                  mistura única de encanto antigo e comodidades modernas. Explore a rica herança cultural da região a
+                  partir desta localização conveniente.</p>
+                <p><strong>Preço:</strong> R$ 650.000,00</p>
+                <p><strong>Endereço:</strong> Rua Luke Skywalker, nº 70, Bairro Tatooine, Ribeirão Preto/SP</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-jovydas-dobilas-2462015.jpg" alt="Imóvel 12"> */}
+                <h3>Apartamento com Vista Panorâmica para o Oceano</h3>
+                <p>Desfrute de vistas deslumbrantes do oceano neste espaçoso apartamento de 3 quartos. Localizado à
+                  beira-mar, você se sentirá cercado pela beleza natural enquanto desfruta de comodidades urbanas de
+                  classe mundial.</p>
+                <p><strong>Preço:</strong> R$ 850.000,00</p>
+                <p><strong>Endereço:</strong> Rua Turco Fraco, nº 4, Bairro Ana Paula, Guarujá/SP</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-bali-demiri-3801167.jpg" alt="Imóvel 13"> */}
+                <h3>Sala Comercial no Centro Financeiro da Cidade</h3>
+                <p>Esta sala comercial elegante e bem iluminada está localizada no coração do distrito financeiro da
+                  cidade. É o local perfeito para empresas que buscam uma localização central e prestígio.</p>
+                <p><strong>Preço:</strong> R$ 250.000,00</p>
+                <p><strong>Endereço:</strong> Rua Lebron James, nº 23, Bairro Los Angeles, Rio de Janeiro/RJ</p>
+            </div>
+            <div class="property">
+              {/* <img src="/img/pexels-marc-mueller-380769.jpg" alt="Imóvel 14"> */}
+                <h3>Sala Comercial na Zona de Alta Tecnologia</h3>
+                <p>Localizada em uma zona de alta tecnologia, esta sala comercial é perfeita para empresas que buscam um
+                  ambiente inovador. Com infraestrutura de última geração, é um local propício para o crescimento.</p>
+                <p><strong>Preço:</strong> R$ 350.000,00</p>
+                <p><strong>Endereço:</strong> Rua Gandalf o Cinzento, nº 1, Bairro Gondor, São Paulo/SP</p>
+            </div>
+            <div class="property">
+              {/* <img src="img/pexels-pixabay-416320.jpg" alt="Imóvel 15"> */}
+                <h3>Sala Comercial em um Arranha-Céu Corporativo</h3>
+                <p>Esta sala comercial está localizada em um arranha-céu corporativo no centro da cidade, proporcionando
+                  uma presença empresarial impressionante. Desfrute de instalações de primeira classe e uma
+                  localização estratégica.</p>
+                <p><strong>Preço:</strong> R$ 300.000,00</p>
+                <p><strong>Endereço:</strong> Rua Vegeta, nº 2, Bairro Kakarotto, Franca/SP</p>
+            </div>
+          </div>
+
+          <div class="carousel-arrow carousel-arrow-left" onclick="prevSlide()">&#8249;</div>
+          <div class="carousel-arrow carousel-arrow-right" onclick="nextSlide()">&#8250;</div>
+
+        </div>
+
+        <footer>
+          {/* <img src="/img/Logo.jpeg" alt="logo" height="61px" width="160px"> */}
+        </footer>
+
+    </div>
+  );
+}
+
+export default App;
