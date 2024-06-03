@@ -6,7 +6,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
@@ -20,6 +19,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -60,10 +60,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function NavBar() {
+export default function NavBar({ onSearch }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -87,11 +88,20 @@ export default function NavBar() {
 
   const handleLogin = () => {
     setIsLoggedIn(true);
+    navigate('/login');
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     handleMenuClose();
+  };
+
+  const handleLogoClick = () => {
+    navigate('/');
+  };
+
+  const handleSearchChange = (event) => {
+    onSearch(event.target.value);
   };
 
   const menuId = 'primary-search-account-menu';
@@ -148,24 +158,16 @@ export default function NavBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <MailIcon />
         </IconButton>
-        <p>Messages</p>
+        <p>Mensagens</p>
       </MenuItem>
       <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 1 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={1} color="error">
-            <NotificationsIcon />
-          </Badge>
+        <IconButton size="large" color="inherit">
+          <NotificationsIcon />
         </IconButton>
-        <p>Notifications</p>
+        <p>Notificações</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -177,21 +179,21 @@ export default function NavBar() {
         >
           <Avatar />
         </IconButton>
-        <p>Profile</p>
+        <p>Perfil</p>
       </MenuItem>
     </Menu>
   );
-  
 
   return (
-    <Box sx={{ flexGrow: 1, marginBottom: "4em" }}>
-      <AppBar position="fixed" sx={{backgroundColor:"#363434"}}>
+    <Box sx={{ flexGrow: 1, marginBottom: '4em' }}>
+      <AppBar position="fixed" sx={{ backgroundColor: '#363434' }}>
         <Toolbar>
           <Typography
             variant="h5"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}>
+            sx={{ display: { xs: 'none', sm: 'block' }, cursor: 'pointer' }}
+            onClick={handleLogoClick}>
             Confiance
           </Typography>
           <Search>
@@ -201,6 +203,7 @@ export default function NavBar() {
             <StyledInputBase
               placeholder="O que você procura…"
               inputProps={{ 'aria-label': 'search' }}
+              onChange={handleSearchChange}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
@@ -212,45 +215,45 @@ export default function NavBar() {
               </Typography>
             </IconButton>
             <IconButton size="large" aria-label="notifications" color="inherit">
-                <NotificationsIcon />
-              <Typography variant="body1" color="inherit" sx={{ ml: 1 }}>
-                Notificações
-              </Typography>
-            </IconButton>
-            {isLoggedIn ? (
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                color="inherit"
-              >
-                <Avatar />
-              </IconButton>
-            ) : (
-              <Button variant="outlined" color="inherit" onClick={handleLogin}>
-                Entrar
-              </Button>
-            )}
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-    </Box>
-  );
+<NotificationsIcon />
+<Typography variant="body1" color="inherit" sx={{ ml: 1 }}>
+Notificações
+</Typography>
+</IconButton>
+{isLoggedIn ? (
+<IconButton
+             size="large"
+             edge="end"
+             aria-label="account of current user"
+             aria-controls={menuId}
+             aria-haspopup="true"
+             onClick={handleProfileMenuOpen}
+             color="inherit"
+           >
+<Avatar />
+</IconButton>
+) : (
+<Button variant="outlined" color="inherit" onClick={handleLogin}>
+Entrar
+</Button>
+)}
+</Box>
+<Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+<IconButton
+           size="large"
+           aria-label="show more"
+           aria-controls={mobileMenuId}
+           aria-haspopup="true"
+           onClick={handleMobileMenuOpen}
+           color="inherit"
+         >
+<MoreIcon />
+</IconButton>
+</Box>
+</Toolbar>
+</AppBar>
+{renderMobileMenu}
+{renderMenu}
+</Box>
+);
 }
