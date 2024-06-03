@@ -5,9 +5,11 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const Footer = () => {
+const Footer = ({ fixed }) => {
   return (
-    <Box sx={{ bgcolor: 'background.paper', py: 1, borderTop: '2px solid #e0e0e0', mt: 5 }}>
+    <Box sx={{position: fixed ? 'fixed' : 'relative',
+    bottom: 0,
+    width: '100%', bgcolor: 'background.paper', py: 1, borderTop: '2px solid #e0e0e0', mt: 5 }}>
       <Container maxWidth="sx">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={8}>
