@@ -1,11 +1,21 @@
 import Funcionario from "../models/Funcionario.js";
 import jsonwebtoken from "jsonwebtoken";
+import bcryptjs from "bcryptjs";
 
 const controller = {};
 
 controller.create = async function (req, res) {
     try {
-        await Funcionario.create(req.body);
+        const { nome, login, senha, imobiliaria } = req.body;
+
+        const hashedPassword = await bcryptjs.hash(senha, 10);
+
+        await Funcionario.create({
+            nome,
+            login,
+            senha: hashedPassword,
+            imobiliaria,
+        });
 
         res.status(201).end();
     } catch (error) {
@@ -51,11 +61,21 @@ controller.login = async function (req, res) {
     const { login, senha } = req.body;
 
     try {
-        const query = Funcionario.findOne({ login, senha });
+        const query = Funcionario.findOne({ login });
 
         let funcionario = (await query.exec())?.toObject();
 
         if (funcionario) {
+            const passwordMatched = await bcryptjs.compare(
+                senha,
+                funcionario.senha
+            );
+
+            if (!passwordMatched)
+                return res
+                    .status(401)
+                    .json({ message: "Login ou senha incorretos" });
+
             const token = jsonwebtoken.sign({}, process.env.SECRET, {
                 subject: funcionario._id.toString(),
                 expiresIn: "3d",
@@ -69,16 +89,23 @@ controller.login = async function (req, res) {
         return res.status(401).json({ message: "Login ou senha incorretos" });
     } catch (err) {
         console.log(err);
+        
         return res.status(500).json(err);
     }
 };
 
 controller.update = async function (req, res) {
     try {
-        const result = await Funcionario.findByIdAndUpdate(
-            req.params.id,
-            req.body
-        );
+        const { nome, login, senha, imobiliaria } = req.body;
+
+        const hashedPassword = await bcryptjs.hash(senha, 10);
+
+        const result = await Funcionario.findByIdAndUpdate(req.params.id, {
+            nome,
+            login,
+            senha: hashedPassword,
+            imobiliaria,
+        });
 
         result ? res.status(204).end() : res.status(404).end();
     } catch (error) {
