@@ -1,0 +1,5 @@
+Notion: https://www.notion.so/Projeto-CONFIANCE-5fcef5ede4744899a47e7ef1f3e7fc09?pvs=4
+
+Jira: https://felipeferreiralegitimo.atlassian.net/jira/software/c/projects/PII/boards/3
+
+GitHub: https://github.com/FatecFranca/DSM-G07-PI3-2024-1
