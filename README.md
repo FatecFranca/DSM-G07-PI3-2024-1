@@ -160,13 +160,14 @@ Os dados da aplicação serão armazenados no MongoDB, um banco de dados NoSQL d
 - `PUT /:id/imagens/:imagemId`: Atualizar uma imagem específica de um imóvel pelo ID da imagem.
 - `DELETE /:id/imagens/:imagemId`: Deletar uma imagem específica de um imóvel pelo ID da imagem.
 
+
 ## 🏡 Screenshots da Aplicação:
 
 Aplicação de Pesquisa de Imóveis : **Confiance**
 
 ### Tela 1: Home - Página Inicial
 
-Listagem de imóveis (casas, apartamentos, etc) 
+Listagem de imóveis (casas, apartamentos, etc)
 
 ![Tela Inicial](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/01.png?raw=true)
 
@@ -174,18 +175,19 @@ Listagem de imóveis (casas, apartamentos, etc)
 
 No exemplo, ao esquisar o termo "apartamento", apenas anúncios com este termo irão ser filtrados.
 
-![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/02.png?raw=true)
+![Pesquisa de Imóveis](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/02.png?raw=true)
 
-### Tela 3: Selecionando o Imóvel 
-Ao seleciona o anúncio desejado, mais informações sobre o imóvel (endereço, preço, qde de banheiros e quartos...) são disponibilizadas. 
-Além disso, o botão **"Contatar Corretor"** permite de abrir em uma nova aba (desktop) ou diretamente o app WhatsApp (mobile).
+### Tela 3: Selecionando o Imóvel
 
-![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/03.png?raw=true)
+Ao selecionar o anúncio desejado, mais informações sobre o imóvel (endereço, preço, quantidade de banheiros e quartos...) são disponibilizadas. Além disso, o botão **"Contatar Corretor"** permite abrir em uma nova aba (desktop) ou diretamente o app WhatsApp (mobile).
+
+![Selecionando o Imóvel](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/03.png?raw=true)
 
 ### Tela 4: Contatando Corretor via WhatsApp
 
-![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/04.png?raw=true)
+![Contatando Corretor via WhatsApp](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/04.png?raw=true)
 
 ### Tela 5: Tela de Login
 
-![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/05.png?raw=true)
+![Tela de Login](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/05.png?raw=true)
+
