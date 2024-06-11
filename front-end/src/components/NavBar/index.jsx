@@ -17,6 +17,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import logo from './logoNav.png';
+
 
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
@@ -189,27 +191,36 @@ export default function NavBar({ setPesquisa }) {
 		<Box sx={{ flexGrow: 1, marginBottom: "4em" }}>
 			<AppBar position="fixed" sx={{ backgroundColor: "#363434" }}>
 				<Toolbar>
-					<Typography
-						variant="h5"
-						noWrap
-						component="div"
+
+					<Box
+						component="img"
 						sx={{
+							height: 40,
+							marginRight:10,
 							display: { xs: "none", sm: "block" },
 							cursor: "pointer",
 						}}
+						alt="Logo"
+						src={logo}
 						onClick={handleLogoClick}
-					>
-						Confiance
-					</Typography>
+					/>
 					<Search>
+
 						<SearchIconWrapper>
 							<SearchIcon />
 						</SearchIconWrapper>
 						<StyledInputBase
+												sx={{
+													width: 400,
+													marginLeft:'20%',
+													marginRight:'20%',
+
+												}}
 							placeholder="O que você procura…"
 							inputProps={{ "aria-label": "search" }}
 							onChange={handleSearchChange}
 						/>
+						
 					</Search>
 					<Box sx={{ flexGrow: 1 }} />
 					<Box sx={{ display: { xs: "none", md: "flex" } }}>
