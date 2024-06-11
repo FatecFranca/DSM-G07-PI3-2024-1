@@ -1,3 +1,4 @@
+
 # DSM-G07-PI3-2024-1
 Repositório do GRUPO 07 do Projeto Interdisciplinar do 3º semestre DSM 2024/1.
 
@@ -71,15 +72,15 @@ https://dsm-g07-pi3-2024-1.onrender.com
 
 ## Tecnologias utilizadas na construção do projeto back-end:
 
-1. **cors** (**`^2.8.5`**): Um middleware para habilitar a política de mesma origem (CORS) em aplicativos Express. Ele permite que um servidor restrinja ou permita solicitações de diferentes origens (domínios).
-2. **bcryptjs** (**`^2.4.3`**): Uma biblioteca para hash de senhas. Ela é usada para criptografar senhas antes de armazená-las no banco de dados, tornando-as mais seguras contra ataques de força bruta.
-3. **chalk** (**`^5.3.0`**): Uma biblioteca para colorir e estilizar o texto no terminal. É útil para melhorar a legibilidade das mensagens de log e saída do console.
-4. **cookie-parser** (**`^1.4.6`**): Um middleware para processar cookies em aplicativos Express. Ele analisa os cookies enviados pelo cliente e os torna acessíveis no objeto **`req.cookies`**.
-5. **dotenv** (**`^16.4.5`**): Uma biblioteca para carregar variáveis de ambiente de um arquivo **`.env`**. Isso é útil para armazenar configurações sensíveis (como chaves de API) fora do código-fonte.
-6. **express** (**`^4.19.2`**): Um framework web para Node.js. Ele simplifica a criação de APIs e aplicativos da web, gerenciando rotas, middlewares e solicitações HTTP.
-7. **jsonwebtoken** (**`^9.0.2`**): Uma biblioteca para criar e verificar tokens JWT (JSON Web Tokens). É comumente usado para autenticação e autorização em aplicativos.
-8. **mongoose** (**`^8.2.3`**): Uma biblioteca ODM (Object-Document Mapper) para MongoDB. Ela facilita a interação com bancos de dados MongoDB, mapeando objetos JavaScript para documentos no banco de dados.
-9. **morgan** (**`^1.10.0`**): Um middleware para registrar solicitações HTTP no console. É útil para depuração e monitoramento de tráfego.
+1. **cors** (**`^2.8.5`**): Um middleware para habilitar a política de mesma origem (CORS) em aplicativos Express. Ele permite que um servidor restrinja ou permita solicitações de diferentes origens (domínios).
+2. **bcryptjs** (**`^2.4.3`**): Uma biblioteca para hash de senhas. Ela é usada para criptografar senhas antes de armazená-las no banco de dados, tornando-as mais seguras contra ataques de força bruta.
+3. **chalk** (**`^5.3.0`**): Uma biblioteca para colorir e estilizar o texto no terminal. É útil para melhorar a legibilidade das mensagens de log e saída do console.
+4. **cookie-parser** (**`^1.4.6`**): Um middleware para processar cookies em aplicativos Express. Ele analisa os cookies enviados pelo cliente e os torna acessíveis no objeto **`req.cookies`**.
+5. **dotenv** (**`^16.4.5`**): Uma biblioteca para carregar variáveis de ambiente de um arquivo **`.env`**. Isso é útil para armazenar configurações sensíveis (como chaves de API) fora do código-fonte.
+6. **express** (**`^4.19.2`**): Um framework web para Node.js. Ele simplifica a criação de APIs e aplicativos da web, gerenciando rotas, middlewares e solicitações HTTP.
+7. **jsonwebtoken** (**`^9.0.2`**): Uma biblioteca para criar e verificar tokens JWT (JSON Web Tokens). É comumente usado para autenticação e autorização em aplicativos.
+8. **mongoose** (**`^8.2.3`**): Uma biblioteca ODM (Object-Document Mapper) para MongoDB. Ela facilita a interação com bancos de dados MongoDB, mapeando objetos JavaScript para documentos no banco de dados.
+9. **morgan** (**`^1.10.0`**): Um middleware para registrar solicitações HTTP no console. É útil para depuração e monitoramento de tráfego.
 
 Os dados da aplicação serão armazenados no MongoDB, um banco de dados NoSQL de código aberto e orientado a documentos. Ele foi projetado para oferecer flexibilidade, escalabilidade e desempenho para aplicações modernas.
 
@@ -158,3 +159,33 @@ Os dados da aplicação serão armazenados no MongoDB, um banco de dados NoSQL d
 - `GET /:id/imagens/:imagemId`: Obter uma imagem específica de um imóvel pelo ID da imagem.
 - `PUT /:id/imagens/:imagemId`: Atualizar uma imagem específica de um imóvel pelo ID da imagem.
 - `DELETE /:id/imagens/:imagemId`: Deletar uma imagem específica de um imóvel pelo ID da imagem.
+
+## 🏡 Screenshots da Aplicação:
+
+Aplicação de Pesquisa de Imóveis : **Confiance**
+
+### Tela 1: Home - Página Inicial
+
+Listagem de imóveis (casas, apartamentos, etc) 
+
+![Tela Inicial](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/01.png?raw=true)
+
+### Tela 2: Pesquisa de Imóveis
+
+No exemplo, ao esquisar o termo "apartamento", apenas anúncios com este termo irão ser filtrados.
+
+![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/02.png?raw=true)
+
+### Tela 3: Selecionando o Imóvel 
+Ao seleciona o anúncio desejado, mais informações sobre o imóvel (endereço, preço, qde de banheiros e quartos...) são disponibilizadas. 
+Além disso, o botão **"Contatar Corretor"** permite de abrir em uma nova aba (desktop) ou diretamente o app WhatsApp (mobile).
+
+![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/03.png?raw=true)
+
+### Tela 4: Contatando Corretor via WhatsApp
+
+![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/04.png?raw=true)
+
+### Tela 5: Tela de Login
+
+![enter image description here](https://github.com/FatecFranca/DSM-G07-PI3-2024-1/blob/main/docs/screenshots/05.png?raw=true)
