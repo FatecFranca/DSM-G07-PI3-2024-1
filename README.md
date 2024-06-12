@@ -4,6 +4,12 @@ Repositório do GRUPO 07 do Projeto Interdisciplinar do 3º semestre DSM 2024/1.
 
 Alunos: Felipe Ferreira Rezende, Gian Carlo Fava, Samuel Santos Souza, Silvio Alves da Silva Junior
 
+Vídeo: https://youtu.be/dUjUhSTYeOU
+
+Notion: https://www.notion.so/Projeto-CONFIANCE-5fcef5ede4744899a47e7ef1f3e7fc09
+
+Jira: https://felipeferreiralegitimo.atlassian.net/jira/software/c/projects/PII/boards/3
+
 # Detalhes do código - Front-End
 
 https://confiance.netlify.app/
